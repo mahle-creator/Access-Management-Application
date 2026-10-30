@@ -1,0 +1,131 @@
+﻿@{
+ViewData["Title"] = "Dashboard";
+}
+
+<div class="container mt-4">
+
+<div class="text-center mb-5">
+
+    <h1>Access Management System</h1>
+
+    <p class="text-muted">
+        Facial Recognition Door Access Control System
+    </p>
+
+</div>
+
+
+<div class="row g-4">
+
+
+    <!-- Register User -->
+
+    <div class="col-12 col-md-6">
+
+        <div class="card shadow-sm h-100">
+
+            <div class="card-body text-center p-4">
+
+                <h3>Register User</h3>
+
+                <p class="text-muted">
+                    Register a new user in the access control system.
+                </p>
+
+                <a asp-controller="User"
+                   asp-action="Register"
+                   class="btn btn-register">
+                    Register User
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- View Users -->
+
+    <div class="col-12 col-md-6">
+
+        <div class="card shadow-sm h-100">
+
+            <div class="card-body text-center p-4">
+
+                <h3>View Users</h3>
+
+                <p class="text-muted">
+                    View and manage registered users.
+                </p>
+
+                <a asp-controller="User"
+                   asp-action="Index"
+                   class="btn btn-manage">
+                    View Users
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Face Recognition -->
+
+    <div class="col-12 col-md-6">
+
+        <div class="card shadow-sm h-100">
+
+            <div class="card-body text-center p-4">
+
+                <h3>Face Recognition</h3>
+
+                <p class="text-muted">
+                    Perform a facial recognition access check.
+                </p>
+
+                <a asp-controller="FaceRecognition"
+                   asp-action="Index"
+                   class="btn btn-monitor">
+                    Start Recognition
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Access Monitoring -->
+
+    <div class="col-12 col-md-6">
+
+        <div class="card shadow-sm h-100">
+
+            <div class="card-body text-center p-4">
+
+                <h3>Access Monitoring</h3>
+
+                <p class="text-muted">
+                    View recorded access attempts and decisions.
+                </p>
+
+                <a asp-controller="AccessLog"
+                   asp-action="Index"
+                   class="btn btn-access-logs">
+                    View Access Logs
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+</div>

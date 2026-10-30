@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "API Test";
+}
+
+<div class="container mt-4">
+
+    <h1>Access API Test</h1>
+
+    <p>Enter a Face ID to test the access control API.</p>
+
+    <form id="apiTestForm">
+
+        <div class="mb-3">
+            <label class="form-label">Face ID</label>
+
+            <input type="text"
+                   id="faceId"
+                   class="form-control"
+                   placeholder="Example: FACE001"
+                   required />
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Test Access
+        </button>
+
+    </form>
+
+    <div id="result" class="mt-4"></div>
+
+</div>
+
+<script> document.getElementById("apiTestForm").addEventListener("submit", async function (event) { event.preventDefault(); const faceId = document.getElementById("faceId").value; const resultDiv = document.getElementById("result"); resultDiv.innerHTML = "<p>Checking access...</p>"; try { const response = await fetch("/api/access/verify", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ faceId: faceId }) }); const data = await response.json(); if (data.decision === "Granted") { resultDiv.innerHTML = ` <div class="alert alert-success"> <h4>ACCESS GRANTED</h4> <p> <strong>Person:</strong> ${data.userName} </p> <p> <strong>Face ID:</strong> ${data.faceId} </p> <p> <strong>Reason:</strong> ${data.reason} </p> <strong>Door can be unlocked.</strong> </div> `; } else { resultDiv.innerHTML = ` <div class="alert alert-danger"> <h4>ACCESS DENIED</h4> <p> <strong>Person:</strong> ${data.userName} </p> <p> <strong>Face ID:</strong> ${data.faceId} </p> <p> <strong>Reason:</strong> ${data.reason} </p> <strong>Door must remain locked.</strong> </div> `; } } catch (error) { resultDiv.innerHTML = ` <div class="alert alert-danger"> <strong>Error:</strong> Unable to communicate with the access API. </div> `; } }); </script>

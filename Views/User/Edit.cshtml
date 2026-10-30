@@ -1,0 +1,53 @@
+﻿@model Access_Management_Application.Models.User
+
+@{
+    ViewData["Title"] = "Edit User";
+}
+
+<div class="container mt-4">
+
+    <h1>Edit User</h1>
+
+    <p>Update the user's registration and access information.</p>
+
+    <form asp-action="Edit" method="post">
+
+        <input type="hidden" asp-for="UserId" />
+
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Name</label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="FaceId" class="form-label">Face ID</label>
+            <input asp-for="FaceId"
+                   class="form-control"
+                   placeholder="Example: FACE001" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="FacialData" class="form-label">Facial Data</label>
+            <input asp-for="FacialData" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Status" class="form-label">Status</label>
+
+            <select asp-for="Status" class="form-control">
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Save Changes
+        </button>
+
+        <a asp-action="Index" class="btn btn-secondary">
+            Cancel
+        </a>
+
+    </form>
+
+</div>

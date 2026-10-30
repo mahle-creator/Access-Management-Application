@@ -1,0 +1,40 @@
+﻿@model Access_Management_Application.Models.AccessLog
+
+@{
+    ViewData["Title"] = "Access Attempt";
+}
+
+<div class="container mt-4">
+
+    <h1>Access Attempt</h1>
+
+    <p>Select a registered user to simulate an access attempt.</p>
+
+    <form asp-action="Attempt" method="post">
+
+        <div class="mb-3">
+            <label class="form-label">User</label>
+
+            <select name="userId" class="form-control" required>
+
+                <option value="">-- Select Person --</option>
+
+                <option value="0">Unknown Person</option>
+
+                @foreach (var user in ViewBag.Users)
+                {
+                    <option value="@user.UserId">
+                        @user.Name (@user.Status)
+                    </option>
+                }
+
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Check Access
+        </button>
+
+    </form>
+
+</div>

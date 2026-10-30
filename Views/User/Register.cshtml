@@ -1,0 +1,134 @@
+﻿@model Access_Management_Application.Models.User
+
+@{
+ViewData["Title"] = "Register User";
+}
+
+<div class="container mt-4">
+
+<div class="row justify-content-center">
+
+    <div class="col-12 col-md-8 col-lg-6">
+
+        <div class="card shadow-sm">
+
+            <div class="card-body p-4">
+
+                <h2 class="mb-2">Register User</h2>
+
+                <p class="text-muted mb-4">
+                    Add a new user to the access control system.
+                </p>
+
+
+                <form asp-action="Register" method="post">
+
+                    <!-- Name -->
+
+                    <div class="mb-3">
+
+                        <label asp-for="Name"
+                               class="form-label">
+                            Full Name
+                        </label>
+
+                        <input asp-for="Name"
+                               class="form-control"
+                               placeholder="Enter full name"
+                               required />
+
+                    </div>
+
+
+                    <!-- Face ID -->
+
+                    <div class="mb-3">
+
+                        <label asp-for="FaceId"
+                               class="form-label">
+                            Face ID
+                        </label>
+
+                        <input asp-for="FaceId"
+                               class="form-control"
+                               placeholder="Example: FACE004"
+                               required />
+
+                        <div class="form-text">
+                            Unique identifier associated with the registered face.
+                        </div>
+
+                    </div>
+
+
+                    <!-- Facial Data -->
+
+                    <div class="mb-3">
+
+                        <label asp-for="FacialData"
+                               class="form-label">
+                            Facial Data
+                        </label>
+
+                        <input asp-for="FacialData"
+                               class="form-control"
+                               placeholder="Enter facial data identifier" />
+
+                        <div class="form-text">
+                            Facial data associated with the registered user.
+                        </div>
+
+                    </div>
+
+
+                    <!-- Status -->
+
+                    <div class="mb-4">
+
+                        <label asp-for="Status"
+                               class="form-label">
+                            Access Status
+                        </label>
+
+                        <select asp-for="Status"
+                                class="form-select">
+
+                            <option value="Active">
+                                Active
+                            </option>
+
+                            <option value="Inactive">
+                                Inactive
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Buttons -->
+
+                    <div class="d-grid gap-2">
+
+                        <button type="submit"
+                                class="btn btn-primary">
+                            Register User
+                        </button>
+
+                        <a asp-controller="Home"
+                           asp-action="Index"
+                           class="btn btn-outline-secondary">
+                            Back to Dashboard
+                        </a>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

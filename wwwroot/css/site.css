@@ -1,0 +1,589 @@
+/* =========================================
+   ACCESS MANAGEMENT SYSTEM
+   LIGHT BLUE SECURITY THEME
+   ========================================= */
+
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #eaf6ff;
+    color: #1e3a5f;
+}
+
+
+/* =========================================
+   NAVIGATION BAR
+   ========================================= */
+
+.navbar {
+    background: #ffffff !important;
+    border-bottom: 2px solid #c7e7ff;
+    box-shadow: 0 3px 12px rgba(30, 136, 229, 0.10);
+}
+
+.navbar-brand {
+    color: #1976d2 !important;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.navbar .nav-link {
+    color: #3b5b78 !important;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+    .navbar .nav-link:hover {
+        color: #1976d2 !important;
+    }
+
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+main {
+    min-height: calc(100vh - 120px);
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+
+/* =========================================
+   PAGE HEADER
+   ========================================= */
+
+.page-header {
+    background: #d9f0ff;
+    color: #155a91;
+    padding: 30px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+    border: 1px solid #bde3ff;
+}
+
+    .page-header h1 {
+        color: #155a91;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+
+    .page-header p {
+        color: #4d7190;
+        margin: 0;
+    }
+
+
+/* =========================================
+   CARDS
+   ========================================= */
+
+.card {
+    border: 1px solid #d5ecfa;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 5px 18px rgba(30, 136, 229, 0.08);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background: #f5fbff;
+    color: #155a91;
+    border-bottom: 1px solid #d5ecfa;
+    border-radius: 18px 18px 0 0 !important;
+    font-weight: 700;
+    padding: 18px 22px;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+
+/* =========================================
+   SECURITY CARDS
+   ========================================= */
+
+.security-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 22px;
+    border: 1px solid #d5ecfa;
+    box-shadow: 0 5px 18px rgba(30, 136, 229, 0.08);
+}
+
+    .security-card h2 {
+        color: #1976d2;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .security-card p {
+        color: #6b8295;
+        margin-bottom: 0;
+    }
+
+
+/* =========================================
+   SECURITY STATUS
+   ========================================= */
+
+.security-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #e0f7ed;
+    color: #15803d;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   ICON BOXES
+   ========================================= */
+
+.security-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e0f2ff;
+    color: #1976d2;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   ACCESS STATUS
+   ========================================= */
+
+.access-granted {
+    color: #15803d;
+    background: #dcfce7;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.access-denied {
+    color: #dc2626;
+    background: #fee2e2;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   BUTTONS
+   ALL BUTTONS USE BLUE SHADES
+   ========================================= */
+
+/* General button settings */
+
+.btn-dashboard,
+.btn-register,
+.btn-manage,
+.btn-access-logs,
+.btn-monitor,
+.btn-logout {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+}
+
+
+/* Dashboard Button */
+
+.btn-dashboard {
+    background: #d9f0ff;
+    color: #1976d2;
+    border: 1px solid #bde3ff;
+}
+
+    .btn-dashboard:hover {
+        background: #c7e7ff;
+        color: #155a91;
+    }
+
+
+/* Register User Button */
+
+.btn-register {
+    background: #c7e7ff;
+    color: #1565c0;
+    border: 1px solid #a9d9f7;
+}
+
+    .btn-register:hover {
+        background: #a9d9f7;
+        color: #0d47a1;
+    }
+
+
+/* Manage Users Button */
+
+.btn-manage {
+    background: #bde3ff;
+    color: #155a91;
+    border: 1px solid #90caf9;
+}
+
+    .btn-manage:hover {
+        background: #90caf9;
+        color: #0d47a1;
+    }
+
+
+/* View Access Logs Button */
+
+.btn-access-logs {
+    background: #a9d9f7;
+    color: #155a91;
+    border: 1px solid #7fc8f3;
+}
+
+    .btn-access-logs:hover {
+        background: #7fc8f3;
+        color: #0d47a1;
+    }
+
+
+/* Monitor Activity Button */
+
+.btn-monitor {
+    background: #90caf9;
+    color: #0d47a1;
+    border: 1px solid #64b5f6;
+}
+
+    .btn-monitor:hover {
+        background: #64b5f6;
+        color: #ffffff;
+    }
+
+
+/* Logout Button */
+
+.btn-logout {
+    background: #64b5f6;
+    color: #ffffff;
+    border: 1px solid #42a5f5;
+}
+
+    .btn-logout:hover {
+        background: #42a5f5;
+        color: #ffffff;
+    }
+
+
+/* =========================================
+   BOOTSTRAP PRIMARY BUTTON
+   ========================================= */
+
+.btn-primary {
+    background: #2196f3;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+    .btn-primary:hover {
+        background: #1976d2;
+    }
+
+
+/* =========================================
+   SUCCESS / DANGER BUTTONS
+   ========================================= */
+
+.btn-success {
+    background: #22c55e;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.btn-danger {
+    background: #ef4444;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.btn-secondary {
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   FORM INPUTS
+   ========================================= */
+
+.form-control,
+.form-select {
+    border-radius: 10px;
+    border: 1px solid #b9d9ee;
+    padding: 11px 13px;
+}
+
+    .form-control:focus,
+    .form-select:focus {
+        border-color: #42a5f5;
+        box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.12);
+    }
+
+
+/* =========================================
+   TABLES
+   ========================================= */
+
+.table {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+    .table thead {
+        background: #e0f2ff;
+        color: #155a91;
+    }
+
+    .table th {
+        font-weight: 700;
+        border-bottom: 2px solid #c7e7ff;
+    }
+
+    .table tbody tr:hover {
+        background: #f4fbff;
+    }
+
+
+/* =========================================
+   SECURITY ALERTS
+   ========================================= */
+
+.security-alert {
+    background: #fff7ed;
+    border-left: 5px solid #f97316;
+    padding: 15px 18px;
+    border-radius: 10px;
+    color: #9a3412;
+}
+
+.security-success {
+    background: #f0fdf4;
+    border-left: 5px solid #22c55e;
+    padding: 15px 18px;
+    border-radius: 10px;
+    color: #166534;
+}
+
+.security-danger {
+    background: #fef2f2;
+    border-left: 5px solid #ef4444;
+    padding: 15px 18px;
+    border-radius: 10px;
+    color: #991b1b;
+}
+
+
+/* =========================================
+   LOGIN PAGE
+   ========================================= */
+
+.login-page {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+    background: #ffffff;
+    border: 1px solid #c7e7ff;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 8px 25px rgba(30, 136, 229, 0.12);
+}
+
+.login-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 20px auto;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d9f0ff;
+    color: #1976d2;
+    font-size: 28px;
+}
+
+.login-card h1 {
+    color: #155a91;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.login-card p {
+    color: #6b8295;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.login-card label {
+    color: #155a91;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.login-button {
+    width: 100%;
+    background: #2196f3;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+}
+
+    .login-button:hover {
+        background: #1976d2;
+        color: #ffffff;
+    }
+
+.login-page {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eaf6ff;
+}
+
+.login-card {
+    width: 400px;
+    padding: 35px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.login-icon {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 5px;
+    color: #1976d2;
+}
+
+.login-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.login-button {
+    background: #64b5f6;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-weight: 600;
+}
+
+    .login-button:hover {
+        background: #42a5f5;
+        color: white;
+    }
+
+
+/* =========================================
+   LOGIN ERROR
+   ========================================= */
+
+.login-error {
+    background: #eaf6ff;
+    border-left: 4px solid #2196f3;
+    color: #155a91;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    background: #ffffff;
+    border-top: 1px solid #c7e7ff;
+    color: #6b8295;
+    padding: 18px 0;
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+   ========================================= */
+
+@media (max-width: 767px) {
+
+    main {
+        padding: 20px 10px;
+    }
+
+    .page-header {
+        padding: 22px;
+    }
+
+        .page-header h1 {
+            font-size: 1.6rem;
+        }
+
+    .security-card {
+        margin-bottom: 15px;
+    }
+
+    .table {
+        font-size: 0.85rem;
+    }
+
+    .login-card {
+        padding: 25px 20px;
+    }
+}

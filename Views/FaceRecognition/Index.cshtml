@@ -1,0 +1,94 @@
+﻿@{
+ViewData["Title"] = "Face Recognition";
+}
+
+<div class="container mt-4">
+
+<div class="row justify-content-center">
+
+    <div class="col-12 col-md-8 col-lg-6">
+
+        <div class="card shadow-sm">
+
+            <div class="card-body p-4 text-center">
+
+                <h2>Face Recognition</h2>
+
+                <p class="text-muted mb-4">
+                    Scan a registered face to determine access.
+                </p>
+
+
+                <div class="mb-4">
+
+                    <div class="border rounded p-4">
+
+                        <h5>Camera / Face Scanner</h5>
+
+                        <p class="text-muted mb-0">
+                            ESP32-CAM connection will be added here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form asp-action="Scan" method="post">
+
+                    <div class="mb-3 text-start">
+
+                        <label class="form-label">
+                            Face ID
+                        </label>
+
+                        <input type="text"
+                               name="faceId"
+                               class="form-control"
+                               placeholder="Example: FACE001"
+                               required />
+
+                        <div class="form-text">
+                            Temporary Face ID input for system testing.
+                        </div>
+
+                    </div>
+
+
+                    <div class="d-grid">
+
+                        <button type="submit"
+                                class="btn btn-primary btn-lg">
+                            Scan Face
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <div class="text-center mt-3">
+
+            <a asp-controller="Home"
+               asp-action="Index"
+               class="btn btn-outline-secondary">
+                Back to Dashboard
+            </a>
+
+            <a asp-controller="AccessLog"
+               asp-action="Index"
+               class="btn btn-outline-secondary">
+                Access Monitoring
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
